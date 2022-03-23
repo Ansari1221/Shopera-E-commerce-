@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+body{
+    background-color: #eee;
+}
+
+.c-wrapper{
+    margin: 20px auto;
+    background-color: #ffffff;
+    width: 260px;
+    box-shadow: 0 0 2px 0 black;
+    border-radius: 4px;
+    text-align: center;    
+}
+#c-clicker{
+    text-decoration: none;
+    color: black;
+}
+.c-image-container{
+    height: 240px;
+    padding: 8px  52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.c-image-container img{
+    width: 100%;
+    height: 100%;
+}
+.c-wrapper h3{
+    font-size: 18px;
+    padding: 10px;
+    align-self: center;
+}
+.c-wrapper:hover{
+    background-color: #eee;
+    box-shadow: 0 0 4px 0 black;
+}

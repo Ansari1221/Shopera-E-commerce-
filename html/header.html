@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Varela Round', sans-serif;
+        }
+        nav{
+            background-color: #4834d4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed; 
+            width: 100vw;
+            top: 0;
+           
+        }
+
+        /* brand starts */
+        .brand{
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            color: #ffffff;
+            width: 20%;
+        }
+        .brand-name{
+            margin-left: 4px;
+            align-items: center;
+        }
+        /* brand ends */
+        
+        /* input starts */
+        .input{
+        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width:30% ;
+        }
+        .searchbar{
+            width: 90%;
+            height: 36px;
+            padding-left: 10px;
+            border: none;
+        }
+        .search-icon{
+            background-color: #eee;
+            width: 10%;
+            height: 36px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4834d4;
+        }
+        /* input ends */
+
+        /* content starts */
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 50%;
+        }
+        .item-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+        .item-container li a{
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 20px 20px;
+        }
+        .item-container li a:hover{
+            background-color: #686de0;
+        }
+        .fa-sort-down{
+            margin-left: 4px;
+        }
+        .fa-home{
+            display: none;
+        }
+        .fa-suitcase{
+            display: none;
+        }
+        .fa-clipboard-list{
+            display: none;
+        }
+
+
+        .sub-item-container{
+            list-style: none;
+            position: absolute;
+            box-shadow: 0 0 2px 0 black;
+            width: 200px;
+            display: none;
+        }
+        .sub-item-container li{
+            background-color: white;
+        }
+        .sub-item-container li a{
+            display: block;
+            color: black;
+            padding: 16px 20px;
+           
+        }
+        .sub-item-container li a:hover{
+            background-color: #eee;
+        }
+        .ddown-item:hover .sub-item-container{
+            display: block;
+        }
+
+        /* content ends */
+
+        /* media query starts */
+        @media screen and (max-width:600px) {
+            
+            nav{
+               
+                width: 100vw;
+            }
+
+
+            .brand{ 
+                width: 20%;
+            }
+            .fa-shopping-bag{
+                display: none;
+            }
+            .brand-name{
+                font-size: 20px;
+            }
+
+
+            .input{
+               
+                width: 30%;
+            }
+            .searchbar{
+                width: 80%;
+            }
+            .search-icon{
+                width: 20%;
+            }
+
+
+            .item-container li a{
+                padding: 20px 14px;
+            }
+            span{
+                display: none;
+            }
+            .fa-home{
+                display: block;
+            }
+            .fa-suitcase{
+                display: block;
+            }
+            .fa-clipboard-list{
+                display: block;
+            }
+            .fa-sort-down{
+                display: none;
+            }
+
+
+            .sub-item-container{
+                width: 120px;
+            }
+            .sub-item-container li a{
+            display: block;
+            color: black;
+            padding: 16px 20px;
+        }
+
+           
+
+        }
+
+        @media  screen and (max-width:900px) and (min-width:601px) {
+           
+
+            nav{
+               
+               width: 100vw;
+           }
+
+
+           .brand{ 
+               width: 20%;
+           }
+           .fa-shopping-bag{
+               display: none;
+           }
+           .brand-name{
+               font-size: 24px;
+           }
+          
+
+           .input{
+              
+               width: 30%;
+           }
+           .searchbar{
+               width: 80%;
+           }
+           .search-icon{
+               width: 20%;
+           }
+
+           
+           .item-container li a{
+               padding: 20px 20px;
+           }
+           span{
+               display: none;
+           }
+           .fa-home{
+               display: block;
+           }
+           .fa-suitcase{
+               display: block;
+           }
+           .fa-clipboard-list{
+               display: block;
+           }
+           .fa-sort-down{
+               display: none;
+           }
+
+
+           .sub-item-container{
+               width: 150px;
+           }
+           .sub-item-container li a{
+            display: block;
+            color: black;
+            padding: 18px 20px;
+        }
+        }
+        /* media query ends */
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+
+            <div class="brand">
+                <i class="fas fa-shopping-bag"></i>
+                <label class="brand-name">Shopera</label>
+            </div>
+
+            <div class="input">
+                <input class="searchbar" type="search" name="" id="" placeholder="Search any product">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="content">
+                <ul class="item-container">
+                    <li><a href="#"><i class="fas fa-home"></i><span>Home</span> </a></li>
+                    <li class="ddown-item">
+                        <a href="#"><i class="fas fa-clipboard-list"></i><span>Categories</span> <i class="fas fa-sort-down icon-margin"></i></a>
+                        <ul class="sub-item-container">
+                            <li><a href="#">Category1</a></li>
+                            <li><a href="#">Category2</a></li>
+                            <li><a href="#">Category3</a></li>
+                            <li><a href="#">Category4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-suitcase"></i><span>Orders</span></a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href=""><i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

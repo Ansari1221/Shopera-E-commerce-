@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Varela Round', sans-serif;
+        }
+        .foot-wrapper{
+            background-color: #1e272e;
+            padding: 20px 28px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
+        .foot-wrapper ul li{
+            list-style: none;
+        }
+        .foot-wrapper ul li a{
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            padding: 6px 10px;
+           
+        }
+        .foot-wrapper ul li a:hover{
+            background-color: #57606f;
+        }
+
+        .heading{
+            color: #4834d4;
+            font-size: 20px;
+            display: block;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        .foot-brand-name{
+            color: white;
+        }
+        .foot-brand, .directs, .useful, .address{
+            width: 20%;
+            
+        }
+        .office-address, .office-number{
+            color: white;
+            padding-left: 10px;
+            text-align: justify;
+        }
+        .office-number{
+            margin-top: 20px;
+
+        }
+        .fa-phone{
+            padding-right: 5px;
+        }
+
+
+        .copy{
+            background-color: #57606f;
+            text-align: center;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 10px 0;
+        }
+
+
+  
+        .app-icon{
+            width: 150px;
+            height: 100px;
+            background-image: url("/asset/app-icon.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .social{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100px;
+        }
+        .social li{
+            border-radius: 50px;
+        }
+        .social li a{
+            font-size: 28px;
+        }
+
+        /* media query starts */
+
+        @media screen and (max-width:600px){
+            body{
+                background-color: antiquewhite;
+            }
+           .foot-wrapper{
+               display: grid;
+               grid-template-columns: 50% 50%;
+               grid-gap: 32px 0;
+           }
+           .office-address, .office-number{
+              
+               width: 100%;
+               font-size: 14px;
+               color: #eee;
+           }
+          .useful, .foot-brand, .directs, .address{
+              width: 100%;
+          }
+
+          .foot-wrapper ul li a{
+              font-size: 14px;
+              color: #eee;
+          }
+          .heading{
+              font-size: 18px;
+          }
+          .foot-brand-name{
+              font-size: 28px;
+              font-weight: bolder;
+              
+          }
+          
+        }
+
+
+
+        @media screen and (min-width:601px) and (max-width:900px) {
+            body{
+                background-color: rgb(93, 253, 133);
+            }
+           .foot-wrapper{
+               display: grid;
+               grid-template-columns: 50% 50%;
+               grid-gap: 32px 0;
+           }
+           .office-address, .office-number{
+              
+               width: 100%;
+               font-size: 16px;
+               color: #eee;
+           }
+          .useful, .foot-brand, .directs, .address{
+              width: 100%;
+          }
+
+          .foot-wrapper ul li a{
+              font-size: 16px;
+              color: #eee;
+          }
+          .heading{
+              font-size: 20px;
+          }
+          .foot-brand-name{
+              font-size: 32px;
+              font-weight: bolder;
+              
+          }
+          
+        }
+
+        /* media query ends */
+        
+
+
+        /* header starts */
+        nav{
+            background-color: #4834d4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        /* brand starts */
+        .brand{
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            color: #ffffff;
+            width: 20%;
+        }
+        .brand-name{
+            margin-left: 4px;
+            align-items: center;
+        }
+        /* brand ends */
+        
+        /* input starts */
+        .input{
+        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width:30% ;
+        }
+        .searchbar{
+            width: 90%;
+            height: 36px;
+            padding-left: 10px;
+            border: none;
+        }
+        .search-icon{
+            background-color: #eee;
+            width: 10%;
+            height: 36px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4834d4;
+        }
+        /* input ends */
+
+        /* content starts */
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 50%;
+        }
+        .item-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+        .item-container li a{
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 20px 20px;
+        }
+        .item-container li a:hover{
+            background-color: #686de0;
+        }
+        .fa-sort-down{
+            margin-left: 4px;
+        }
+        .fa-home{
+            display: none;
+        }
+        .fa-suitcase{
+            display: none;
+        }
+        .fa-clipboard-list{
+            display: none;
+        }
+        /* content ends */
+
+        /* media query starts */
+        @media screen and (max-width:600px) {
+            body{
+                background-color: antiquewhite;
+            }
+            nav{
+               
+                width: 100vw;
+            }
+
+
+            .brand{ 
+                width: 20%;
+            }
+            .fa-shopping-bag{
+                display: none;
+            }
+            .brand-name{
+                font-size: 20px;
+            }
+
+
+            .input{
+               
+                width: 30%;
+            }
+            .searchbar{
+                width: 80%;
+            }
+            .search-icon{
+                width: 20%;
+            }
+
+
+            .item-container li a{
+                padding: 20px 14px;
+            }
+            span{
+                display: none;
+            }
+            .fa-home{
+                display: block;
+            }
+            .fa-suitcase{
+                display: block;
+            }
+            .fa-clipboard-list{
+                display: block;
+            }
+            .fa-sort-down{
+                display: none;
+            }
+        }
+
+        @media  screen and (max-width:900px) and (min-width:601px) {
+            body{
+                background-color: aquamarine;
+            }
+
+            nav{
+               
+               width: 100vw;
+           }
+
+
+           .brand{ 
+               width: 20%;
+           }
+           .fa-shopping-bag{
+               display: none;
+           }
+           .brand-name{
+               font-size: 24px;
+           }
+          
+
+           .input{
+              
+               width: 30%;
+           }
+           .searchbar{
+               width: 80%;
+           }
+           .search-icon{
+               width: 20%;
+           }
+
+           
+           .item-container li a{
+               padding: 20px 20px;
+           }
+           span{
+               display: none;
+           }
+           .fa-home{
+               display: block;
+           }
+           .fa-suitcase{
+               display: block;
+           }
+           .fa-clipboard-list{
+               display: block;
+           }
+           .fa-sort-down{
+               display: none;
+           }
+        }
+        /* media query ends */
+       
+        /* header ends*/
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+
+            <div class="brand">
+                <i class="fas fa-shopping-bag"></i>
+                <label class="brand-name">Shopera</label>
+            </div>
+
+            <div class="input">
+                <input class="searchbar" type="search" name="" id="" placeholder="Search any product">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="content">
+                <ul class="item-container">
+                    <li><a href="#"><i class="fas fa-home"></i><span>Home</span> </a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i><span>Categories</span> <i class="fas fa-sort-down icon-margin"></i></a></li>
+                    <li><a href="#"><i class="fas fa-suitcase"></i><span>Orders</span></a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href=""><i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates asperiores vel eaque, quos sint est, expedita quidem nam eum assumenda excepturi a. Suscipit distinctio vel delectus neque modi laborum. Beatae incidunt distinctio nesciunt similique laboriosam! Quos voluptate aliquid illo corporis modi tempore beatae iure esse animi enim est vel, ullam unde nihil molestias ipsam similique minus molestiae. Cumque ex est nam autem nulla repudiandae ipsum iste, dolore dolor deleniti ipsam consequuntur quaerat nobis maiores sequi perferendis laudantium vitae laborum? Laboriosam id quo, laborum culpa similique harum voluptatum praesentium tenetur ab, asperiores nostrum veniam, sunt accusantium quaerat voluptate nam minima facilis debitis! Quia, neque, blanditiis illum quis rem qui maiores aliquid quaerat, tenetur tempora reprehenderit! Quis consequatur saepe, eligendi corporis optio officiis explicabo officia itaque porro dolor labore fugiat quam laudantium recusandae voluptate quae est illum odio incidunt. Magnam eveniet mollitia sunt hic sed, ut reiciendis, maiores ex nihil quod vitae iure modi facilis cupiditate repellat, assumenda dolorum illo nulla libero ipsam pariatur a aperiam veritatis deleniti? Soluta voluptate quasi beatae natus adipisci veritatis dolorum, sint tempore eligendi dolore recusandae sequi aspernatur ducimus est, quibusdam dicta provident a aperiam at harum. Non ipsum rem obcaecati nulla porro fuga illum, velit consequatur asperiores quas quod rerum reprehenderit eum similique magnam! Esse explicabo odit, maxime earum sit doloribus magnam officia sint quaerat voluptas, iure consequuntur cum necessitatibus nulla provident. Nisi recusandae nam totam mollitia ut, dolorem natus deleniti modi accusamus vitae cum reprehenderit ipsum nulla? Consectetur harum atque doloribus vitae odio excepturi velit molestiae, est, aliquid, impedit eum? Quia accusamus deleniti illum distinctio sunt, ipsum sint possimus rerum voluptate, quo dolorem, fuga unde sed maxime. Dolorum dolor, voluptates repellat incidunt fuga nam non! Error numquam suscipit consectetur, quam quo placeat minus nostrum nobis molestiae recusandae a? Suscipit error, amet quis corrupti sed tenetur a deserunt aut iste adipisci explicabo quasi eius vero repellat illo voluptatibus magni! Obcaecati magnam aperiam nesciunt fuga eius quos nemo earum architecto officia. Alias ex exercitationem numquam fuga quos necessitatibus ad, nemo optio, illo similique culpa, nesciunt odio et modi. Aut maiores nihil iusto recusandae sint nulla totam, minus eos excepturi blanditiis laborum doloribus cupiditate ducimus praesentium, facilis deleniti distinctio in a voluptatum sapiente voluptates at placeat magnam! Veniam eaque dolorum expedita, accusamus mollitia quo doloribus minima consectetur, labore explicabo facere earum distinctio optio doloremque ipsam ratione ex possimus debitis repellat inventore odio vel impedit! Tempora in doloremque fugiat pariatur debitis cumque laborum, vel quisquam, atque velit eligendi ipsa incidunt asperiores dicta quidem ut voluptate neque error. Quidem quam vero qui perspiciatis sed enim sint! Eius ducimus facilis provident aspernatur nihil amet magni eveniet dignissimos laboriosam autem exercitationem nam pariatur harum, sapiente blanditiis, laudantium sed voluptatum ex totam voluptatibus commodi aperiam repellendus. Culpa vel expedita laboriosam possimus dolor explicabo unde, debitis iste. Placeat inventore repudiandae fugiat saepe deleniti obcaecati voluptatum nisi odio ea. Quibusdam dolorem, perferendis cupiditate doloremque culpa perspiciatis exercitationem, consectetur molestiae vero, eveniet quae similique. Asperiores laudantium ut nulla. Fugit ad accusamus sapiente. Esse repudiandae, ipsum quia sint harum libero possimus ab officiis sed quos vitae aliquam animi et alias facere quidem dolorem, quis consequatur provident atque, similique nulla tempore assumenda quisquam! Iure laboriosam est dicta, non, assumenda enim odit iusto inventore sapiente animi earum officiis doloribus esse possimus? Sed omnis expedita atque similique, rem delectus! Impedit aperiam debitis nobis ipsam fugiat perferendis obcaecati, aspernatur, ipsa, nam quos delectus accusantium. Cupiditate perspiciatis necessitatibus dolores dolore iusto, perferendis molestiae voluptatum dolorum iste alias repudiandae sed! Suscipit voluptate facere, laboriosam quae culpa dolorem explicabo, et a amet, assumenda aperiam eos molestias sint harum. Repellat quas consequatur odio eius nulla, voluptate nam voluptates et quia itaque omnis laborum, quaerat doloremque porro facilis libero maiores inventore sit explicabo ad! Officia sint sequi rerum quo impedit voluptates corporis aperiam eos, ipsam earum eveniet minima animi, laborum doloremque voluptatem, sapiente fuga. Quia quaerat sed minus illum similique dolor assumenda accusantium tempora nisi in quisquam earum aperiam aspernatur vero atque labore adipisci, debitis enim cum veritatis fuga distinctio ex, laudantium veniam? Aliquam ipsum repellendus eaque molestiae praesentium consectetur eligendi sint quas mollitia inventore facilis culpa similique eveniet cumque delectus esse atque, error corporis rerum architecto doloribus. Quibusdam distinctio earum ipsa modi fuga minus quidem. Excepturi, non! Nostrum officiis odio distinctio tempora quaerat suscipit fuga odit ipsa dolorum, cumque quo harum nulla illum debitis deserunt illo inventore beatae expedita blanditiis. Ad dolor omnis consequuntur animi laboriosam sint pariatur? Officia officiis sed ullam repellendus adipisci impedit, sunt ut aliquam expedita ratione quasi repellat quae iste eaque reprehenderit, error quos voluptatibus. Dolorum fugiat, est consequatur dolorem corporis libero amet natus voluptatibus optio doloremque magnam earum labore tempora? Aspernatur repellat recusandae nemo quas eveniet autem vel magnam corrupti architecto non exercitationem, minus aliquid ut alias doloribus neque quibusdam officiis temporibus tempore obcaecati eligendi impedit. Repudiandae, porro. Asperiores architecto voluptate eligendi, nesciunt doloribus reiciendis illo saepe cupiditate esse. Quae iste nihil error odit deleniti rerum vero ab aut voluptatibus harum atque mollitia quam eaque accusantium nulla, incidunt voluptatem qui quo praesentium, expedita necessitatibus. Ea minus sunt incidunt veritatis, voluptatem aliquam quis ullam ad corrupti exercitationem ducimus perspiciatis excepturi maxime iste cum suscipit quos architecto totam soluta maiores voluptatibus quibusdam omnis, neque nostrum. Suscipit nisi eligendi corrupti minus ea tenetur libero magni sunt similique, ab ratione in quasi doloribus explicabo architecto ullam aliquam cum placeat quibusdam incidunt ipsa voluptatem sapiente. Cum iure et debitis ducimus id omnis, aperiam non, distinctio dolorem, quod odio. Alias optio nemo quasi amet, corporis aperiam necessitatibus iste iusto accusamus possimus perspiciatis, tenetur esse corrupti nisi laudantium nobis dolore minus nam, ipsa maxime doloremque voluptatibus deserunt numquam est. In nihil iusto perferendis obcaecati a culpa, voluptatum non dolorum aliquid eaque repellat commodi error magni nemo. Officia quod neque temporibus fugit, laudantium modi deleniti illo excepturi quasi aliquam ratione, nisi nostrum unde facere provident hic recusandae veritatis! Aut architecto blanditiis quas. Atque vitae modi ea quasi, asperiores architecto tempora expedita molestias voluptas omnis in! Quasi quidem dolores, ipsum hic expedita earum commodi minima modi sint nemo in?</p>
+
+    <footer>
+        <div class="foot-wrapper">
+            <div class="foot-brand">
+                <label for="" class="heading foot-brand-name">Shopera</label>
+                <div class="app-icon">
+
+                </div>
+                    
+                <ul class="social">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="https://twitter.com/login?lang=en"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="directs">
+                <label for="" class="heading">Direct Links</label>
+                <ul class="direct-list">
+                    <li><a href="/html/home.html">Home</a></li>
+                    <li><a href="/html/orders.html"> My Orders</a></li>
+                    <li><a href="/html/cart.html">My Cart</a></li>
+                    <li><a href="/html/profile">My profile</a></li>
+                </ul>
+            </div>
+
+            <div class="useful">
+                <label for="" class="heading">Useful Liks</label>
+                <ul class="useful-list">
+                    <li><a href="/html/about.html">About Us</a></li>
+                    <li><a href="/html/contact-us.html">Contact Us</a></li>
+                    <li><a href="/html/faq.html">FAQ</a></li>
+                    <li><a href="/html/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <label for="" class="heading">Address</label>
+                <p class="office-address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, temporibus cumque. Nulla cumque alias mollitia fugiat hic magnam error tenetur?
+                </p>
+                <p class="office-number"><i class="fas fa-phone"></i>+91123456789</p>
+            </div>
+        </div>
+        <div class="copy">
+            All rights reserved &copy copyright 2022
+        </div>
+    </footer>
+
+</body>
+</html>
